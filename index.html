@@ -18,8 +18,8 @@
   <meta name="og:description" content="Engli Language translator online" />
   <meta name="og:image" content="https://engli-lang.github.io/engli-web/icon.png" />
 
-  <script type="module" crossorigin src="./assets/index-1657c989.js"></script>
-  <link rel="stylesheet" href="./assets/index-ca7882b2.css">
+  <script type="module" crossorigin src="./assets/index-751f17ea.js"></script>
+  <link rel="stylesheet" href="./assets/index-7ad9617b.css">
 </head>
 
 <body>
@@ -28,16 +28,22 @@
     <p>One-way English to Engli translator.</p>
   </div>
   <div class="translation">
-    <!-- this is a translator from english to engli -->
-    <textarea id="input" placeholder="Type English here"></textarea>
-    <!-- readonly because its one way translation -->
-    <textarea id="output" readonly placeholder="Engli will appear here"></textarea>
+    <div class="translation-column">
+      <!-- this is a translator from english to engli -->
+      <textarea id="input" placeholder="Type English here"></textarea>
+      <div class="char-count" id="input-chars">0</div>
+    </div>
+    <div class="translation-column">
+      <!-- readonly because its one way translation -->
+      <textarea id="output" readonly placeholder="Engli will appear here"></textarea>
+      <div class="char-count" id="output-chars">0</div>
+    </div>
   </div>
   <!-- confidence level box -->
   <div id="confidence"></div>
   <div class="details-container">
     <div class="details">
-      <h2>What is this?</h2>
+      <h2>What is this?&nbsp;</h2>
       <p>Engli is a community fork of English with these benefits (among others):</p>
       <ul>
         <li>💥 <strong>0 collisions</strong> &mdash; no words will sound identical, and English words with multiple
@@ -54,7 +60,8 @@
           &quot;multi-player&quot; instead of &quot;multiplayer&quot;</li>
         <li>🌐 <strong>International</strong> &mdash; no more divide between &quot;center&quot; and &quot;centre&quot;,
           &quot;sentr&quot; is used instead</li>
-        <li>⚡ <strong>Faster to type in</strong> &mdash; most words are shorter, which allows you to type faster</li>
+        <li>⚡ <strong>Faster to type in</strong> &mdash; most words are shorter, which allows you to type faster&nbsp;
+        </li>
       </ul>
       <p>It builds upon English, with all its idioms and expressions, but makes changes that improve upon many flaws of
         the
@@ -76,7 +83,7 @@
       </tr>
       <tr>
         <td>c</td>
-        <td>ch</td>
+        <td>th (hard)</td>
       </tr>
       <tr>
         <td>d</td>
