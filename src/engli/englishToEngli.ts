@@ -28,8 +28,11 @@ function wouldBeInstant(text: string): boolean {
     for (const w of words) {
         let word = w;
         word = word.replace(/^\W+/, '').replace(/\W+$/, '').toLowerCase();
-        if (knownTranslations[word] === undefined) {
-            return false;
+        // if its just a number or now empty
+        if (word.trim() !== '' && isNaN(word as any)) {
+            if (knownTranslations[word] === undefined) {
+                return false;
+            }
         }
     }
     return true;
@@ -48,6 +51,14 @@ async function englishToEngli(text: string): Promise<EngliTranslation> {
         const capitalization = getCapitalization(word);
 
         word = word.toLowerCase();
+
+        // check if its a number or empty
+        if (word === '' || !isNaN(Number(word))) {
+            return {
+                engli: word,
+                confidence: 1,
+            };
+        }
 
         let result = knownTranslations[word];
         let confidence = 1;
@@ -100,6 +111,10 @@ async function englishToEngli(text: string): Promise<EngliTranslation> {
 
         // remove ˈ and '
         result = result.replace(/ˈ/g, '').replace(/'/g, '');
+        // remove ː
+        result = result.replace(/ː/g, '');
+        // remove :
+        result = result.replace(/:/g, '');
 
         return {
             engli: result,

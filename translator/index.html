@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Engli Translator</title>
+    <meta name="description" content="Engli Language translator online" />
+    <meta name="keywords" content="Engli, English, Language, Translator, Online" />
+    <meta name="author" content="Engli" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="google" content="notranslate" />
+    <!-- it uses icon.png -->
+    <meta name="theme-color" content="#14a992" />
+    <meta name="og:title" content="Engli Translator" />
+    <meta name="og:description" content="Engli Language translator online" />
+    <meta name="og:image" content="https://engli-lang.github.io/engli-web/icon.png" />
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Engli Translator</h1>
+        <p>One-way English to Engli translator.</p>
+        <a href="../">Back to Home</a>
+    </div>
+    <div class="translation">
+        <div class="translation-column">
+            <!-- this is a translator from english to engli -->
+            <textarea id="input" placeholder="Type English here"></textarea>
+            <div class="char-count" id="input-chars">0</div>
+        </div>
+        <div class="translation-column">
+            <!-- readonly because its one way translation -->
+            <textarea id="output" readonly placeholder="Engli will appear here"></textarea>
+            <div class="char-count" id="output-chars">0</div>
+        </div>
+    </div>
+    <!-- confidence level box -->
+    <div id="confidence"></div>
+    <div class="details-container">
+        <div class="details">
+            <h2>What is this?&nbsp;</h2>
+            <p>Engli is a community fork of English with these benefits (among others):</p>
+            <ul>
+                <li>💥 <strong>0 collisions</strong> &mdash; no words will sound identical, and English words with
+                    multiple
+                    meanings
+                    that differ too much will be split into multiple words</li>
+                <li>🧱 <strong>Phonetically rigid</strong> &mdash; each letter only has one sound, and the letters
+                    surrounding
+                    it have
+                    no impact on that</li>
+                <li>🤔 <strong>0 ambiguity</strong> &mdash; there is only one way to spell any word, and only one way to
+                    pronounce it
+                </li>
+                <li>👥 <strong>Community-driven</strong> &mdash; syntax and words are decided by community vote</li>
+                <li>❄️ <strong>0 inconsistency</strong> &mdash; prefixes and suffixes will stay separate from a word,
+                    like
+                    &quot;multi-player&quot; instead of &quot;multiplayer&quot;</li>
+                <li>🌐 <strong>International</strong> &mdash; no more divide between &quot;center&quot; and
+                    &quot;centre&quot;,
+                    &quot;sentr&quot; is used instead</li>
+                <li>⚡ <strong>Faster to type in</strong> &mdash; most words are shorter, which allows you to type
+                    faster&nbsp;
+                </li>
+            </ul>
+            <p>It builds upon English, with all its idioms and expressions, but makes changes that improve upon many
+                flaws of
+                the
+                language and aim to make it easier to use, faster to type/speak in, and easier to learn.</p>
+
+        </div>
+        <table border="1">
+            <tr>
+                <th>Engli Letter</th>
+                <th>English Sound</th>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>aa</td>
+            </tr>
+            <tr>
+                <td>b</td>
+                <td>b</td>
+            </tr>
+            <tr>
+                <td>c</td>
+                <td>th (hard)</td>
+            </tr>
+            <tr>
+                <td>d</td>
+                <td>d</td>
+            </tr>
+            <tr>
+                <td>e</td>
+                <td>eh</td>
+            </tr>
+            <tr>
+                <td>f</td>
+                <td>f</td>
+            </tr>
+            <tr>
+                <td>g</td>
+                <td>g (not j)</td>
+            </tr>
+            <tr>
+                <td>h</td>
+                <td>h (exhale)</td>
+            </tr>
+            <tr>
+                <td>i</td>
+                <td>i</td>
+            </tr>
+            <tr>
+                <td>j</td>
+                <td>j</td>
+            </tr>
+            <tr>
+                <td>k</td>
+                <td>k</td>
+            </tr>
+            <tr>
+                <td>l</td>
+                <td>l</td>
+            </tr>
+            <tr>
+                <td>m</td>
+                <td>m</td>
+            </tr>
+            <tr>
+                <td>n</td>
+                <td>n</td>
+            </tr>
+            <tr>
+                <td>o</td>
+                <td>ah</td>
+            </tr>
+            <tr>
+                <td>p</td>
+                <td>p</td>
+            </tr>
+            <tr>
+                <td>q</td>
+                <td>ng</td>
+            </tr>
+            <tr>
+                <td>r</td>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>s</td>
+                <td>s</td>
+            </tr>
+            <tr>
+                <td>t</td>
+                <td>t</td>
+            </tr>
+            <tr>
+                <td>u</td>
+                <td>uh</td>
+            </tr>
+            <tr>
+                <td>v</td>
+                <td>v</td>
+            </tr>
+            <tr>
+                <td>w</td>
+                <td>oo</td>
+            </tr>
+            <tr>
+                <td>x</td>
+                <td>sh</td>
+            </tr>
+            <tr>
+                <td>y</td>
+                <td>ee</td>
+            </tr>
+            <tr>
+                <td>z</td>
+                <td>z</td>
+            </tr>
+        </table>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

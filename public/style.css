@@ -61,18 +61,7 @@ h1 {
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #3178c6aa);
+  height: 8em;
 }
 
 .card {
@@ -134,7 +123,21 @@ textarea {
   min-height: 10em;
   transition: border-color 0.25s;
   outline: none;
+}
+
+.translation-column {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.char-count {
+  width: 100%;
+  text-align: right;
+  margin-top: 0.2rem;
+  color: #888;
 }
 
 .translation {
@@ -189,7 +192,6 @@ textarea {
   align-items: center;
   gap: 1rem;
   width: 100%;
-  margin-bottom: 1rem;
 }
 
 /* table padding in cells */
@@ -210,7 +212,6 @@ table {
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  margin-top: 2rem;
   gap: 3rem;
 }
 
@@ -226,6 +227,9 @@ table {
   margin: 1rem 0 1rem 2rem;
 }
 
-.details h2 {
-  margin-bottom: 1rem;
+.details h2,
+.details h1,
+.details h3 {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 }

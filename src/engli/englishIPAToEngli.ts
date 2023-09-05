@@ -8,8 +8,8 @@ export default function englishIPAToEngli(ipaString: string): string {
         g: 'g',
         f: 'f',
         v: 'v',
-        θ: 'd', // Represents both /θ/ and /ð/ as 'd' in Engli
-        ð: 'd', // Represents both /θ/ and /ð/ as 'd' in Engli
+        θ: 'f', // Represents both /θ/ and /ð/ as 'f' in Engli
+        ð: 'c', // Represents both /θ/ and /ð/ as 'c' in Engli
         s: 's',
         z: 'z',
         ʃ: 'x', // Represents both /ʃ/ and /ʒ/ as 'x' in Engli
